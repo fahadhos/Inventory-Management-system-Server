@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\Api\ItemController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+ 
+Route::apiResource('items',ItemController::class);
+// Route::get('inventories',[InventoryController::class,'index']);
+// Route::post('inventories',[InventoryController::class,'store']);
+// Route::post(uri: 'login',[AuthController::class,'login']);
