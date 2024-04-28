@@ -13,6 +13,8 @@ class Item extends Model
         'name',
         'description',
         'image',
+        'category',
+        'imagelink',
         'qty',
     ];
 }

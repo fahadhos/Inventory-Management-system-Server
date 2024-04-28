@@ -33,8 +33,10 @@ class ItemController extends Controller
 $validator = Validator::make($request->all(),[
     'name'=>'required',
     'desccription'=>'required',
+    'imagelink'=>'required',
     'image'=>'required',
     'qty'=>'required',
+    'category'=>'required',
 ]);
 if($validator->fails()){
     return response()->json([

@@ -18,6 +18,8 @@ class Item extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
+            $table->string('imagelink');
+            $table->string('category');
             $table->text('description');
             $table->integer('qty');
             $table->timestamps();

@@ -27,6 +27,8 @@ class ItemRequest extends FormRequest
          
             return [
                 'name' => ['required','string'],
+                'imagelink' => ['required','string'],
+                'category' => ['required','string'],
                 'image' => ['required','image','mimes:jpeg,png,jpg,gif,svg','max:2048'],
                 'description' => ['required','string'],
                 'qty' => ['required','integer'],
